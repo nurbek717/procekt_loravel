@@ -1,7 +1,6 @@
 <?php
 
 namespace Database\Factories;
-use App\Models\Comment;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -19,7 +18,6 @@ class PostFactory extends Factory
     {
         return [
             'title' => fake()->sentence(),
-            'comment_id' => Comment::factory(), 
             'description' => fake()->paragraph()
         ];
     }
