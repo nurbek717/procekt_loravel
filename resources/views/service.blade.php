@@ -5,6 +5,5 @@
 
     
     <h1>Year: {{$service['year']}} </h1>
-    <h2> Price: {{$service['price']}}</h2>
    
 </x-layout>

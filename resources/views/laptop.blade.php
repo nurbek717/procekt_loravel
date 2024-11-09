@@ -5,6 +5,6 @@
 
     
     <h2> Price: {{$laptop['price']}}</h2>
-    <h2> Price: {{$laptop['color']}}</h2>
+    <h2> Color: {{$laptop['color']}}</h2>
    
 </x-layout>

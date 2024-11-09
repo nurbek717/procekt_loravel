@@ -2,7 +2,7 @@
 //chaqirib olish 
 use Illuminate\Support\Facades\Route;
 use App\Models\Student;
-use App\Models\Car;
+use App\Models\Company;
 use App\Models\Laptop;
 
 
@@ -35,7 +35,7 @@ Route::get('/user/{id}', function ($id) {
 Route::get('/services', function () {
 
 
-    $services = Car::all();
+    $services = Company::all();
     return view('/services' , [
         'services' => $services ,
     ]);
@@ -44,7 +44,7 @@ Route::get('/services', function () {
 // Laptop laptops 
 
 Route::get('/service/{id}', function ($id) {
-    $service = Car::find($id);
+    $service = Company::find($id);
     return view ('service', ['service' => $service]);
 });
 

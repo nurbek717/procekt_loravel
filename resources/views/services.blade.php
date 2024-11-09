@@ -8,7 +8,7 @@
 
         <a href="/service/{{$service ['id'] }}" class="text-blue-500 hover:underine">
               <li>
-                  {{$service['model']}}
+                  {{$service['name']}}
              </li>
         </a>
   

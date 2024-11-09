@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('laptobs', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(App\Models\Company::class);
             $table->string('brand')->nullable();
             $table->string('price');
             $table->string('color');

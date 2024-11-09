@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Car>
  */
-class CarFactory extends Factory
+class CompanyFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +17,8 @@ class CarFactory extends Factory
     public function definition(): array
     {
         return [
-            'model' => fake()->word(),
-            'year' => fake()->year(),
-            'price' => fake()->numberBetween(5000, 50000)
+            'name' => fake()->company(),
+            'year' => fake()->year()
         ];
     }
 }
