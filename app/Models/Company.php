@@ -13,7 +13,7 @@ class Company extends Model {
 
     protected $fillable = [ 'name', 'year'];
 
-    public function laptop(){
+    public function laptops(){
         return $this->hasMany(Laptop::class);
     }
 

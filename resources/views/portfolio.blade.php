@@ -7,7 +7,7 @@
 
 <a href="/laptop/{{$laptop ['id'] }}" class="text-blue-500 hover:underine">
       <li>
-          {{$laptop['brand']}}
+          <strong>{{$laptop->company->name}}</strong>  || {{$laptop['brand']}}
      </li>
 </a>
 

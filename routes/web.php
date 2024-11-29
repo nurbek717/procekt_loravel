@@ -4,30 +4,20 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Student;
 use App\Models\Company;
 use App\Models\Laptop;
-
-
-Route::get('/', function () {
-
-    
-    return view('home');
-});
-
-//users da modellar bilanishlash
-
-Route::get('/users', function () {
-
-    $users = Student::all();
-    return view('/users' , [
-        'users' => $users ,
-    ]);
-});
+use App\Http\Controllers\StudentController;
 
 
 
-Route::get('/user/{id}', function ($id) {
-    $user = Student::find($id);
-    return view ('user', ['user' => $user]);
-});
+Route::view('/' , 'home');
+
+
+
+Route::resource('students', StudentController::class);
+Route::resource('laptops', StudentController::class);
+// ----------------------------------------------------------------------
+
+
+
 
 
 
@@ -52,7 +42,8 @@ Route::get('/service/{id}', function ($id) {
 
 Route::get('/portfolio', function () {
 
-    $laptops = Laptop::all();
+    //  $laptops = Laptop::all();
+     $laptops = Laptop::with('company')->get();
 
     return view('/portfolio' , [
         'laptops' => $laptops ,
